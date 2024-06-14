@@ -1,0 +1,6 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" id="yu[K]N~;h30+LisdO(iQ" x="0" y="0"><comment pinned="true" h="153" w="334">"""
+Created by: Alexander James
+Created on: June 2024
+This is the Hello, World! program 
+"""
+</comment><statement name="HANDLER"><block type="gameSplash" id="0:pzqa~l?}v]WI{=%I@L"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="true"></mutation><value name="title"><shadow type="text" id="xLI0xhP5C9jfRCz(@Mk$"><field name="TEXT">Hello, World!</field></shadow></value></block></statement></block></xml>
