@@ -1,10 +1,16 @@
+// Created by Alex James
+// Created on June 14 2024
+// 
+// This block plays a sound when the A button is pressed
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    music.play(music.melodyPlayable(music.thump), music.PlaybackMode.UntilDone)
+    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
 })
 // 
 // Created by: Alexander James
-// Created on: June 2024
+// Created on: June 14 2024
 // This is the Whack-A-Mole program 
+// 
+// This block sets sprites and enables movement
 // 
 let Hammer = sprites.create(img`
     ................................
