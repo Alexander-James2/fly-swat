@@ -1,3 +1,6 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    music.play(music.melodyPlayable(music.thump), music.PlaybackMode.UntilDone)
+})
 // 
 // Created by: Alexander James
 // Created on: June 2024
@@ -38,7 +41,6 @@ let Hammer = sprites.create(img`
     ................................
     `, SpriteKind.Player)
 Hammer.setPosition(71, 75)
-Hammer.setStayInScreen(true)
 controller.moveSprite(Hammer)
 scene.setBackgroundImage(img`
     555555555555555599999999999999999999999999999999999111111111111111111111199999999999999999999999999999999997777777777777eeeeeeeeeeee7777777779999999999999999999
@@ -162,3 +164,4 @@ scene.setBackgroundImage(img`
     eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     eeeeeeeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     `)
+Hammer.setStayInScreen(true)
