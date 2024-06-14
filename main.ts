@@ -3,7 +3,7 @@
 // Created on: June 2024
 // This is the Whack-A-Mole program 
 // 
-let mySprite = sprites.create(img`
+let Hammer = sprites.create(img`
     ................................
     ................................
     ................................
@@ -37,7 +37,9 @@ let mySprite = sprites.create(img`
     ................................
     ................................
     `, SpriteKind.Player)
-mySprite.setPosition(71, 75)
+Hammer.setPosition(71, 75)
+Hammer.setStayInScreen(true)
+controller.moveSprite(Hammer)
 scene.setBackgroundImage(img`
     555555555555555599999999999999999999999999999999999111111111111111111111199999999999999999999999999999999997777777777777eeeeeeeeeeee7777777779999999999999999999
     555555555555555599999999555999999999999999999999991111111111111111111111119999999999999999999999999999999997777777777777eeeeeeeeeeee7777777779999999999999999999
