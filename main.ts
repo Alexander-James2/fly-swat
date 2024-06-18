@@ -70,6 +70,20 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         `)
     music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.UntilDone)
 })
+// Created by: Alexander James
+// Created on: June 18, 2024
+// 
+// This block determines your final grade depending on your score
+info.onCountdownEnd(function () {
+    if (info.score() >= 10) {
+        game.splash(info.score(), "Grade: A")
+    } else if (info.score() >= 5) {
+        game.splash(info.score(), "Grade: B")
+    } else {
+        game.splash(info.score(), "Grade: C")
+    }
+    game.reset()
+})
 // Checks if you hit a mole
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     if (controller.A.isPressed()) {
@@ -126,7 +140,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
             . f b b b f b b b f b b b b f . 
             . f b b f b b b b b f b b b f . 
             `)
-        pause(500)
+        info.changeScoreBy(1)
+        pause(200)
         Hammer.setImage(img`
             ................................
             ................................
@@ -188,9 +203,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 // Created by: Alexander James
 // Created on: June 14 2024
 // This is the Whack-A-Mole program 
-// 
-// This block sets sprites and enables movement
-// 
 let Mole: Sprite = null
 let Hammer: Sprite = null
 // These blocks control the start screen
@@ -603,6 +615,7 @@ scene.setBackgroundImage(img`
     `)
 Hammer.setStayInScreen(true)
 info.startCountdown(25)
+info.setScore(0)
 Mole = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . f f f f f . . . . . . 
